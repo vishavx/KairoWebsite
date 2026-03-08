@@ -976,7 +976,7 @@
   .about-heading, 
   .features-heading,
   .pricing-heading {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2.4rem, 8vw, 4rem);
   }
 
   .story-scroll {
@@ -1063,7 +1063,7 @@
   }
 
   .story-block--big {
-    font-size: 9px;
+    font-size: 30px;
   }
 
   .story-content {

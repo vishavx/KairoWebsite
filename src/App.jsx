@@ -159,7 +159,7 @@ function Hero() {
 const STORY_BLOCKS = [
   { text: "We all carry thoughts we don't say out loud.", big: true, gap: '0.8rem' },
   { text: "Sometimes sharing them is the first step to feeling lighter. Kairo gives you a space to do exactly that.", big: false, gap: '6.5rem' },
-  { text: "Your thoughts matter.", big: true, gap: '0.4rem' },
+  { text: "Your thoughts matter.", big: true, gap: '0rem' },
   { text: "Your feelings matter.", big: true, gap: '0.4rem' },
   { text: "And taking a moment to reflect on them is never wasted time.", big: false, gap: '0' },
 ];
