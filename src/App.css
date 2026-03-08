@@ -1015,7 +1015,7 @@
 /* Small Mobile (iPhone, etc.) */
 @media (max-width: 540px) {
   .navbar {
-    padding: 0.75rem 4%;
+    padding: 1.25rem 6%; /* Increased padding so CTA isn't at the edge */
   }
 
   .nav-logo {
@@ -1034,43 +1034,28 @@
   .hero-heading {
     font-size: clamp(3.5rem, 20vw, 7rem);
     margin-bottom: 1.5rem;
-    text-align: center;
   }
 
   .hero-sub {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    text-align: center;
   }
 
   .hero-baymax {
     width: 140px;
     bottom: auto;
-    top: 25svh; /* Lowered toward middle */
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    top: 25svh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: none !important; /* Cancel CSS transform so framer-motion doesn't mess it up */
     opacity: 0.95;
     z-index: 10;
   }
 
   .hero-content {
     padding: 0 6% 12%;
-    margin-top: 45svh; /* Pushed down below centered Baymax */
-    text-align: center;
-  }
-
-  .hero-eyebrow {
-    justify-content: center;
-  }
-
-  .hero-sub {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-actions {
-    justify-content: center;
+    margin-top: 45svh; /* Push down below centered Baymax */
   }
 
   .story-scroll {
