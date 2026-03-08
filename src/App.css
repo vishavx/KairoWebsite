@@ -620,16 +620,17 @@
 /* TiltedCard wrapper needs explicit height for the overlay to fill */
 .pricing-tilt-wrapper .tilted-card-figure {
   height: auto !important;
-  min-height: 480px;
+  min-height: 520px;
 }
 
 .pricing-tilt-wrapper .tilted-card-inner {
   width: 100% !important;
-  height: 100% !important;
-  min-height: 480px;
-  background: #141210;
+  height: auto !important;
+  min-height: 520px;
+  background: #141311;
   border: 1px solid var(--border);
   border-radius: 20px;
+  overflow: visible !important;
 }
 
 
@@ -940,4 +941,173 @@
   font-size: 0.78rem;
   color: rgba(214, 203, 186, 0.2);
   font-weight: 300;
+}
+
+/* ── Responsive Adjustments ──────────────── */
+
+/* Tablets (iPad, etc.) */
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: clamp(4rem, 15vw, 12rem);
+  }
+  
+  .framework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (Landscape & Large Phones) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .nav-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-baymax {
+    width: 160px;
+    right: 5%;
+    bottom: 12%;
+  }
+
+  .hero-content {
+    padding: 0 6% 12%;
+  }
+
+  .about-heading, 
+  .features-heading,
+  .pricing-heading {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .story-scroll {
+    padding: 8rem 6%;
+  }
+
+  .story-block--big {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pricing-tilt-wrapper .tilted-card-figure,
+  .pricing-tilt-wrapper .tilted-card-inner {
+    min-height: 600px; /* Increase height for mobile/tablet stacking */
+  }
+
+  .pricing-card {
+    padding: 2.5rem 1.5rem 3.5rem; /* Add bottom padding for CTA */
+  }
+}
+
+/* Mobile Nav Overlap Fix */
+@media (max-width: 600px) {
+  .nav-links a {
+    display: none;
+  }
+}
+
+/* Small Mobile (iPhone, etc.) */
+@media (max-width: 540px) {
+  .navbar {
+    padding: 0.75rem 4%;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  /* Hide secondary nav links on very small screens to prevent overlap */
+  .nav-links a {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: clamp(3.5rem, 20vw, 7rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-baymax {
+    width: 130px;
+    bottom: auto;
+    top: 5rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    z-index: 10;
+  }
+
+  .hero-content {
+    padding: 0 6% 12%;
+    margin-top: 10rem; /* Push down to clear Baymax */
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .story-scroll {
+    padding: 6rem 4%;
+  }
+
+  .story-content {
+    gap: 4vh;
+  }
+
+  .about-section,
+  .features-section,
+  .pricing-section {
+    padding: 6rem 6%;
+  }
+
+  .framework-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 4rem 6% 2rem;
+  }
+
+  .footer-inner {
+    gap: 3rem;
+  }
+
+  .footer-policies {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

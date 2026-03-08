@@ -477,6 +477,16 @@ function PricingSection() {
                     </ul>
                     {plan.note && <p className="pricing-note">{plan.note}</p>}
                     {plan.extra && <div className="pricing-extra">{plan.extra}</div>}
+                    
+                    <a 
+                      href="https://api.whatsapp.com/send/?phone=7009580010&text=Hey&type=phone_number&app_absent=0"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="pricing-cta pricing-cta--primary"
+                      style={{ textDecoration: 'none', textAlign: 'center', marginTop: 'auto' }}
+                    >
+                      Get Access
+                    </a>
                   </div>
                 }
               />
