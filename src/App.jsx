@@ -157,11 +157,11 @@ function Hero() {
 
 /* ─────────────── Story Section ─────────────── */
 const STORY_BLOCKS = [
-  { text: "We all carry thoughts we don't say out loud.", big: true, gap: '0.8rem' },
-  { text: "Sometimes sharing them is the first step to feeling lighter. Kairo gives you a space to do exactly that.", big: false, gap: '6.5rem' },
-  { text: "Your thoughts matter.", big: true, gap: '0rem' },
-  { text: "Your feelings matter.", big: true, gap: '0.4rem' },
-  { text: "And taking a moment to reflect on them is never wasted time.", big: false, gap: '0' },
+  { text: "We all carry thoughts we don't say out loud.", big: true },
+  { text: "Sometimes sharing them is the first step to feeling lighter. Kairo gives you a space to do exactly that.", big: false },
+  { text: "Your thoughts matter.", big: true },
+  { text: "Your feelings matter.", big: true },
+  { text: "And taking a moment to reflect on them is never wasted time.", big: false },
 ];
 
 function StorySection() {
@@ -176,7 +176,6 @@ function StorySection() {
               block.big ? 'story-block--big' : 'story-block--small',
               block.italic ? 'story-block--italic' : '',
             ].join(' ')}
-            style={{ marginBottom: block.gap }}
             initial={{ color: block.big ? '#2e2820' : 'rgba(201,168,124,0.18)' }}
             whileInView={{ color: block.big ? '#D6CBBA' : '#C9A87C' }}
             viewport={{ once: false, margin: '0px 0px -30% 0px' }}

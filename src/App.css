@@ -395,6 +395,13 @@
   font-style: normal;
 }
 
+/* Default Desktop Gaps */
+.story-block:nth-child(1) { margin-bottom: 0.8rem; }
+.story-block:nth-child(2) { margin-bottom: 6.5rem; }
+.story-block:nth-child(3) { margin-bottom: 0rem; }
+.story-block:nth-child(4) { margin-bottom: 0.4rem; }
+.story-block:nth-child(5) { margin-bottom: 0; }
+
 
 
 /* ── Philosophy Band ──────────────────── */
@@ -1048,7 +1055,8 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    transform: none !important; /* Cancel CSS transform so framer-motion doesn't mess it up */
+    transform: none !important;
+    animation: none !important; /* Force cancel CSS float animation */
     opacity: 0.95;
     z-index: 10;
   }
@@ -1059,7 +1067,7 @@
   }
 
   .story-scroll {
-    padding: 6rem 4%;
+    padding: 8rem 4% 6rem; /* Big gap before first block */
   }
 
   .story-block--big {
@@ -1067,8 +1075,15 @@
   }
 
   .story-content {
-    gap: 4vh;
+    gap: 0; /* Remove flex gap so nth-child handles spacing */
   }
+
+  /* Specific Mobile Gaps */
+  .story-block:nth-child(1) { margin-bottom: 2rem; } /* small gap */
+  .story-block:nth-child(2) { margin-bottom: 6rem; } /* big gap */
+  .story-block:nth-child(3) { margin-bottom: 0rem; } /* no gap between thoughts and feelings */
+  .story-block:nth-child(4) { margin-bottom: 2rem; } /* small gap */
+  .story-block:nth-child(5) { margin-bottom: 6rem; } /* big gap */
 
   .about-section,
   .features-section,
