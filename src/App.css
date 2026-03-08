@@ -1004,8 +1004,11 @@
 
 /* Mobile Nav Overlap Fix - Keep CTA visible */
 @media (max-width: 600px) {
-  .nav-links a:not(.nav-cta) {
+  .nav-links a {
     display: none;
+  }
+  .nav-links a.nav-cta {
+    display: flex;
   }
 }
 
