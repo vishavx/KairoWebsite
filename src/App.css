@@ -810,7 +810,6 @@
   50%       { opacity: 0; }
 }
 
-/* CTA buttons */
 .pricing-cta {
   font-family: var(--font);
   font-size: 0.95rem;
@@ -822,6 +821,7 @@
   letter-spacing: -0.01em;
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   margin-top: auto;
+  display: none; /* Hide on desktop by default */
 }
 
 .pricing-cta--primary {
@@ -1004,6 +1004,10 @@
     gap: 3rem;
   }
 
+  .pricing-cta {
+    display: block; /* Show on mobile/tablet */
+  }
+
   .pricing-tilt-wrapper .tilted-card-figure,
   .pricing-tilt-wrapper .tilted-card-inner {
     min-height: 600px; /* Increase height for mobile/tablet stacking */
@@ -1043,11 +1047,13 @@
   .hero-heading {
     font-size: clamp(3.5rem, 20vw, 7rem);
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 
   .hero-sub {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .hero-baymax {
