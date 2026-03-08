@@ -1062,6 +1062,10 @@
     padding: 6rem 4%;
   }
 
+  .story-block--big {
+    font-size: 9px;
+  }
+
   .story-content {
     gap: 4vh;
   }

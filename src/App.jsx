@@ -38,10 +38,12 @@ function BaymaxFloat() {
     controls
       .start({ opacity: 1, y: 0, transition: { duration: 1.2, delay: 1.2, ease: [0.16, 1, 0.3, 1] } })
       .then(() => {
-        controls.start({
-          y: [0, -32, 0],
-          transition: { duration: 2.4, ease: 'easeInOut', repeat: Infinity, repeatDelay: 0.6 },
-        });
+        if (!window.matchMedia('(max-width: 540px)').matches) {
+          controls.start({
+            y: [0, -32, 0],
+            transition: { duration: 2.4, ease: 'easeInOut', repeat: Infinity, repeatDelay: 0.6 },
+          });
+        }
       });
   }, []);
 
